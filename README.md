@@ -40,14 +40,14 @@ Event Ticketing is a databse-driven project that manages events, ticket sales an
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://reactjs.org/">Supabase</a></li>
+    <li><a href="https://supabase.com/">Supabase</a></li>
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">SQL</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -64,9 +64,9 @@ Event Ticketing is a databse-driven project that manages events, ticket sales an
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **User Management:** Register users with unique emails and phone numbers.
+- **Event Creation:** Organizers can create and manage multiple events.
+- **Ticketing and payments:** Users can purchase tickets and make secure payments.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
