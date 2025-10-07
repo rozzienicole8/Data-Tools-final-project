@@ -27,9 +27,9 @@
 
 # Event Ticketing <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
+A web application that allows users to browse upcoming events, purchase tickets and manage event attendance records in real time.
 
-**[your_project__name]** is a...
+Event Ticketing is a supabase powered database that helps both event organizers and attendees by providing an easy platform to create events, buy tickets and track user data through an effecient database structure.
 
 ## 🛠 Built With <a name="built-with"></a>
 
