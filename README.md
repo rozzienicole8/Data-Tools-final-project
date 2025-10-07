@@ -29,7 +29,7 @@
 
 A web application that allows users to browse upcoming events, purchase tickets and manage event attendance records in real time.
 
-Event Ticketing is a supabase powered database that helps both event organizers and attendees by providing an easy platform to create events, buy tickets and track user data through an effecient database structure.
+Event Ticketing is a databse-driven project that manages events, ticket sales and payments using Supabase (PostgreSQL).It allows event organizers to create events and users to book and pay for the tickets seamlessly. 
 
 ## 🛠 Built With <a name="built-with"></a>
 
