@@ -1,4 +1,8 @@
-
+--============================================================================
+-- Event Ticketing database schema
+--created for data tools final project using Supabase( PostgreSQ)
+--============================================================================
+-- USER TABLE
 create table users (
   user_id SERIAL PRIMARY KEY,
   name VARCHAR(100)NOT NULL,
@@ -7,6 +11,7 @@ create table users (
   created_at TIMESTAMP DEFAULT current_timestamp
 );
 
+--EVENTS TABLE
 create table events (
   event_id SERIAL PRIMARY KEY,
   event_name VARCHAR(150)NOT NULL,
@@ -18,6 +23,7 @@ create table events (
 created_at TIMESTAMP DEFAULT current_timestamp
 );
 
+--TICKETS TABLE
 create table tickets (
   ticket_id SERIAL PRIMARY KEY,
   event_id INT REFERENCES events(event_id) ON DELETE CASCADE,
@@ -28,6 +34,7 @@ create table tickets (
   status VARCHAR(20) DEFAULT 'valid'
 );
 
+--PAYMENTS TABLE
 create table payments(
   payment_id SERIAL PRIMARY KEY,
   ticket_id INT REFERENCES tickets(ticket_id) ON DELETE CASCADE,
@@ -37,6 +44,7 @@ create table payments(
   status VARCHAR(20) DEFAULT 'completed'
 );
 
+--Insert sample data into user table
 insert into users (name, email, phone)
 values
 ('Alice Mwangi','alice@gmail.com','+254712345786'),
@@ -44,12 +52,14 @@ values
 ('Clara Njeri','clara@gmail.com', '+254712465890'),
 ('David Kimani','david@gmail.com','+254794867092');
 
+--insert sample data into events table
 insert into events (event_name, event_description, location, event_date, event_time, organizer_id)
 values
 ('Nairobi Tech Fest', 'A technology and innovation exhibition.','KICC Nairobi', '2025-11-10','09:00:00',1),
 ('Afrobeats Live Concert', 'A Night of African music and dance.','Carnivore Grounds','2025-12-05','08:00:00',2),
 ('Food and Culture Expo', 'Celebrating diverse cuisines and cultures.', 'Sarit Expo Centre','2025-10-25','10:00:00',3);
 
+--Insert sample data into tickets table
 insert into tickets(event_id, user_id, ticket_type,price)
 values
 (1,2,'VIP',2500.00),
@@ -58,6 +68,7 @@ values
 (3,4,'Student',1000.00),
 (3,1,'Regular', 1500.00);
 
+--Insert sample data into payments table
 insert into payments (ticket_id, payment_method,amount)
 values
 (1,'M-Pesa', 2500.00),
