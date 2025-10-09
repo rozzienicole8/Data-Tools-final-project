@@ -69,3 +69,37 @@ This document describes all database tables, their fields, and relationships use
 - All timestamps are in UTC format.
 - Cascade delete ensures related records are removed automatically.
 - Designed and tested using **PostgreSQL (Supabase)
+
+
+The following sample data demonstrates the structure  within the **Event Ticketing System** database.
+
+| **Table** | **Sample Records (Preview)** |
+|------------|------------------------------|
+| **users** | (1, *Alice Mwangi*, *alice@example.com*, *+254712345678*)<br>(2, *Brian Otieno*, *brian@example.com*, *+254701234567*)<br>(3, *Clara Njeri*, *clara@example.com*, *+254798765432*)<br>(4, *David Kimani*, *david@example.com*, *+254723456789*) |
+| **events** | (1, *Nairobi Tech Fest*, *KICC, Nairobi*, *2025-11-10*, *09:00:00*, organizer_id = 1)<br>(2, *Afrobeats Live Concert*, *Carnivore Grounds*, *2025-12-05*, *19:00:00*, organizer_id = 2)<br>(3, *Food and Culture Expo*, *Sarit Expo Centre*, *2025-10-25*, *10:00:00*, organizer_id = 3) |
+| **tickets** | (1, event = 1, user = 2, *VIP*, *2500.00*)<br>(2, event = 1, user = 3, *Regular*, *1500.00*)<br>(3, event = 2, user = 1, *Regular*, *2000.00*)<br>(4, event = 3, user = 4, *Student*, *1000.00*)<br>(5, event = 3, user = 1, *Regular*, *1500.00*) |
+| **payments** | (1, ticket = 1, *M-Pesa*, *2500.00*)<br>(2, ticket = 2, *Credit Card*, *1500.00*)<br>(3, ticket = 3, *M-Pesa*, *2000.00*)<br>(4, ticket = 4, *Cash*, *1000.00*)<br>(5, ticket = 5, *M-Pesa*, *1500.00*) |
+
+---
+
+### 🧾 Sample Data Overview
+
+| **Metric** | **Value** |
+|-------------|-----------|
+| Total Users | 4 |
+| Total Events | 3 |
+| Total Tickets Sold | 5 |
+| Total Payments | 5 |
+| Highest Ticket Price | 2500.00 |
+| Most Used Payment Method | M-Pesa |
+| Earliest Event | Food and Culture Expo — 2025-10-25 |
+| Latest Event | Afrobeats Live Concert — 2025-12-05 |
+
+---
+
+### 💬 Insights
+
+- Each event is **organized by a user**, and users can also **purchase tickets** for other events.
+- **M-Pesa** is the most common payment method among attendees.
+- **VIP tickets** have the highest price and represent premium event access.
+
