@@ -95,13 +95,11 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
-Example command:
+To run this project, you need:
 
-```sh
- gem install rails
-```
- -->
+- [A Supabase account](https://supabase.com/)
+- [Knowledge on SQL](https://www.w3schools.com/sql/)
+- A schema for creating your tables in the DB
 
 ### Setup
 
