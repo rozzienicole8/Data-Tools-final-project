@@ -62,8 +62,9 @@ PAYMENTS:
                    │  └────────────┘                          │
                    └──────────────────────────────────────────┘
 
-### Relationship Details
+```
 
+### Relationship Details
 
 1. USERS → EVENTS (1 → ∞)
   • One user (organizer) can create many events.
