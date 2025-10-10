@@ -65,4 +65,17 @@ PAYMENTS:
 ### Relationship Details
 
 
+1. USERS → EVENTS (1 → ∞)
+  • One user (organizer) can create many events.
+
+2. USERS → TICKETS (1 → ∞)
+    • One user can buy many tickets.
+
+ 3. EVENTS → TICKETS (1 → ∞)
+    • Each event can have multiple tickets.
+
+ 4. TICKETS → PAYMENTS (1 → ∞)
+    • Each ticket can have multiple payments.
+    
+
 
