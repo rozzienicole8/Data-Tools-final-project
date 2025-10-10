@@ -23,6 +23,8 @@ create table events (
 created_at TIMESTAMP DEFAULT current_timestamp
 );
 
+--examples of queries for testing
+
 --TICKETS TABLE
 create table tickets (
   ticket_id SERIAL PRIMARY KEY,
@@ -76,3 +78,35 @@ values
 (3,'M-Pesa',2000.00),
 (4,'Cash',1000.00),
 (5,'M-Pesa', 1500.00);
+
+
+
+--examples of queries for testing
+
+-- View all data in a table
+SELECT * FROM users;
+
+-- Users who purchased tickets and event details
+SELECT
+u.name, e.event_name, t.ticket_type, t.price
+FROM tickets t
+JOIN users u ON t.user_id = u.user_id
+JOIN events e ON t.event_id = e.event_id;
+
+-- Payments made with M-Pesa
+SELECT
+u.name, e.event_name, p.amount, p.payment_method
+FROM payments p
+JOIN tickets t ON p.ticket_id = t.ticket_id
+JOIN users u ON t.user_id = u.user_id
+JOIN events e ON t.event_id = e.event_id
+WHERE p.payment_method = 'M-Pesa';
+
+
+
+
+
+
+
+
+
