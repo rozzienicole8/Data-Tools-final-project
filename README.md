@@ -105,12 +105,9 @@ To run this project, you need:
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+```sh 
+  cd Data-Tools-final-project
+  git clone https://github.com/rozzienicole8/Data-Tools-final-project
 ```
 --->
 
