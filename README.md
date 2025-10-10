@@ -74,9 +74,12 @@ Event Ticketing is a database-driven project that manages events, ticket sales a
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project only if available.
+> This project is designed to be deployed on Supabase.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- Database Schema: Available in `schema.sql`
+- Documentation: See `data_dictionary.md` and `erd.md`
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
