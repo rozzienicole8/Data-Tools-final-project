@@ -48,35 +48,27 @@ PAYMENTS:
 ### Event Ticketing System (ASCII Version)
 
 ```text
-┌────────────┐        ┌────────────┐        ┌────────────┐        ┌──────────────┐
-│   USERS    │        │   EVENTS   │        │   TICKETS  │        │   PAYMENTS   │
-│------------│        │------------│        │------------│        │--------------│
-│ user_id PK │◄────┐  │ event_id PK│◄──┐    │ ticket_id PK│◄──┐  │ payment_id PK │
-│ full_name  │     │  │ event_name │   │    │ event_id FK │   │  │ ticket_id FK  │
-│ email (UQ) │     │  │ description│   │    │ user_id FK  │   │  │ method        │
-│ phone      │     │  │ location   │   │    │ ticket_type │   │  │ amount        │
-│ created_at │     │  │ event_date │   │    │ price       │   │  │ payment_date  │
-└────────────┘     │  │ event_time │   │    │ purchase_dt │   │  │ status        │
-                   │  │ organizer_id│──┘    │ status      │   │  └──────────────┘
-                   │  │ created_at  │        └────────────┘   │
-                   │  └────────────┘                          │
-                   └──────────────────────────────────────────┘
+┌────────────┐         ┌────────────┐         ┌────────────┐         ┌──────────────┐
+│   users    │ 1     ∞ │   events   │ 1     ∞ │   tickets  │ 1     1 │   payments   │
+│------------│---------│------------│---------│------------│---------│--------------│
+│ user_id PK │◄────────│ event_id PK│◄────────│ ticket_id PK│◄───────│ payment_id PK│
+│ name       │         │ event_name │         │ event_id FK │         │ ticket_id FK │
+│ email      │         │ organizer_id FK──────►│ user_id FK  │         │ amount       │
+│ phone      │         │ location   │         │ price       │         │ status       │
+│ created_at │         │ event_date │         │ status      │         │ payment_date │
+└────────────┘         └────────────┘         └────────────┘         └──────────────┘
+
 
 ```
 
 ### Relationship Details
 
-1. USERS → EVENTS (1 → ∞)
-  • One user (organizer) can create many events.
+| Relationship           | Type  | Description                                  |
+| ---------------------- | ----- | -------------------------------------------- |
+| **Users → Events**     | 1 → ∞ | One user (organizer) can create many events. |
+| **Users → Tickets**    | 1 → ∞ | One user can purchase many tickets.          |
+| **Events → Tickets**   | 1 → ∞ | One event can have multiple tickets.         |
+| **Tickets → Payments** | 1 → 1 | Each ticket corresponds to one payment.      |
 
-2. USERS → TICKETS (1 → ∞)
-    • One user can buy many tickets.
-
- 3. EVENTS → TICKETS (1 → ∞)
-    • Each event can have multiple tickets.
-
- 4. TICKETS → PAYMENTS (1 → ∞)
-    • Each ticket can have multiple payments.
-    
 
 
