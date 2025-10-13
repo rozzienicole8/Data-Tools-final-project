@@ -58,7 +58,7 @@ This document describes all database tables, their fields, and relationships use
 
 | Relationship | Description |
 |---------------|-------------|
-| users → events | A user can organize many events |
+| users → events | A user (organizer) can organize many events |
 | users → tickets | A user can buy many tickets |
 | events → tickets | An event can have many tickets |
 | tickets → payments | Each ticket has one or more payments |
