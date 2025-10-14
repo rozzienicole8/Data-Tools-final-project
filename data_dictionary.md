@@ -102,4 +102,35 @@ The following sample data demonstrates the structure  within the **Event Ticketi
 - Each event is **organized by a user**, and users can also **purchase tickets** for other events.
 - **M-Pesa** is the most common payment method among attendees.
 - **VIP tickets** have the highest price and represent premium event access.
+  
+
+--------------------
+### PERFORMANCE INDEXES.
+
+CREATE INDEX idx_users_name_email ON users (name, email);
+- Improves search speed when filtering users by name or email.
+-Also helps quickly check for existing email addresses to enforce uniqueness.
+
+CREATE INDEX idx_events_name_date ON events (event_name, event_date);
+- Speeds up lookups and sorting by event name or event date 
+- (e.g., searching for events happening in a specific month or finding an event by name).
+
+CREATE INDEX idx_events_organizer_id ON events (organizer_id);
+- Enhances JOIN performance between events and users tables,
+- especially when retrieving all events organized by a specific user.
+
+CREATE INDEX idx_tickets_event_user ON tickets (event_id, user_id);
+- Optimizes JOIN operations between tickets, users, and events tables.
+-Useful for queries like “show all tickets bought by a user for a given event.
+
+CREATE INDEX idx_tickets_status ON tickets (status);
+- Makes filtering by ticket status (e.g., valid, cancelled) much faster,
+- especially in views like active_tickets.
+
+CREATE INDEX idx_payments_ticket_method_status 
+ON payments (ticket_id, payment_method, status);
+-Improves query performance for reports or dashboards that 
+-filter payments by ticket, payment method (e.g., M-Pesa, card), or payment status.
+
+
 
