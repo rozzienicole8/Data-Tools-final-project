@@ -243,26 +243,28 @@ If you like this project, please ⭐️ it on GitHub and share it with others!
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+-  Supabase for providing an excellent PostgreSQL database platform that made development and deployment seamless.
+
+- The Data Tools Course for the comprehensive database fundamentals curriculum that inspired and guided the creation of this project.
+
+- My peer, Emmanuel Petit for his valuable guidance throughout the development process.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+```
+Q1: Does the database automatically update event statuses after the date passes?
+A1:  Not by default. You can create a SQL view or scheduled function to handle event status updates automatically.
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
+Q2: Can I add more entities like venues or sponsors?
+A2: Absolutely — the schema is designed to be extensible using Supabase by adding or removing entities.]**
 
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
+  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+--->
+```
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
