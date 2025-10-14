@@ -116,6 +116,24 @@ CREATE INDEX idx_payments_ticket_method_status ON payments (ticket_id, payment_m
 
 
 
+-- VIEW: active_tickets
+CREATE VIEW active_tickets AS
+SELECT 
+    u.name AS customer_name,
+    u.email,
+    e.event_name,
+    e.location,
+    e.event_date,
+    e.event_time,
+    t.ticket_type,
+    t.price,
+    t.purchase_date,
+    t.status
+FROM tickets t
+JOIN users u ON t.user_id = u.user_id
+JOIN events e ON t.event_id = e.event_id
+WHERE t.status = 'valid';
+
 
 
 
