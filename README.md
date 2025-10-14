@@ -156,27 +156,38 @@ Example command:
 
 To run tests, run the following command:
 
-<!--
 Example command:
+```sql
+ -- View all data in a table
+SELECT * FROM users;
 
-```sh
-  bin/rails test test/models/article_test.rb
+-- Users who purchased tickets and event details
+SELECT
+u.name, e.event_name, t.ticket_type, t.price
+FROM tickets t
+JOIN users u ON t.user_id = u.user_id
+JOIN events e ON t.event_id = e.event_id;
+
+-- Payments made with M-Pesa
+SELECT
+u.name, e.event_name, p.amount, p.payment_method
+FROM payments p
+JOIN tickets t ON p.ticket_id = t.ticket_id
+JOIN users u ON t.user_id = u.user_id
+JOIN events e ON t.event_id = e.event_id
+WHERE p.payment_method = 'M-Pesa';
 ```
 --->
 
 ### Deployment
 
 You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
 ```
- -->
-
+Deploy using Supabase
+```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+--->
 
 <!-- AUTHORS -->
 
@@ -184,17 +195,13 @@ Example:
 
 > Mention all of the collaborators of this project.
 
-👤 **Author1**
+👤 **Author**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@nicolerozzie9@gmail.com] (https://github.com/nicolerozzie9)
 
-👤 **Author2**
+- LinkedIn:[LinkedIn] (https://linkedin.com/in/RozzieNicole)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -204,9 +211,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+-  **QR Code Tickets for easy event check-in.**
+-  **Admin Dashboard for managing users and events.**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -226,7 +233,7 @@ Feel free to check the [issues page](../../issues/).
 
 > Write a message to encourage readers to support your project
 
-If you like this project...
+If you like this project, please ⭐️ it on GitHub and share it with others!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
