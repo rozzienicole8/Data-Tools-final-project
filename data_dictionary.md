@@ -107,18 +107,18 @@ The following sample data demonstrates the structure  within the **Event Ticketi
 --------------------
 ### PERFORMANCE INDEXES.
 
--**idx_users_name_email ON users (name, email)-Improves search speed when filtering users by name or email.**
+-`idx_users_name_email ON users (name, email)`-Improves search speed when filtering users by name or email.
 
--**idx_events_name_date ON events (event_name, event_date)-Speeds up lookups and sorting by event name or event date.**
+-`idx_events_name_date ON events (event_name, event_date)`-Speeds up lookups and sorting by event name or event date.
 
--**idx_events_organizer_id ON events (organizer_id)-Enhances JOIN performance between events and users tables,
-especially when retrieving all events organized by a specific user.**
+-`idx_events_organizer_id ON events (organizer_id)`-Enhances JOIN performance between events and users tables,
+especially when retrieving all events organized by a specific user.
 
--**idx_tickets_event_user ON tickets (event_id, user_id)-Optimizes JOIN operations between tickets, users, and events tables.**
+-`idx_tickets_event_user ON tickets (event_id, user_id)`-Optimizes JOIN operations between tickets, users, and events tables.
 
--**idx_tickets_status ON tickets (status)-Makes filtering by ticket status (e.g., valid, cancelled) much faster,especially in views like active_tickets.**
+-`idx_tickets_status ON tickets (status)`-Makes filtering by ticket status (e.g., valid, cancelled) much faster,especially in views like active_tickets.
 
--**idx_payments_ticket_method_status ON payments (ticket_id, payment_method, status)-Improves query performance for reports or dashboards that filter payments by ticket, payment method (e.g., M-Pesa, card), or payment status.**
+-`idx_payments_ticket_method_status ON payments (ticket_id, payment_method, status)`-Improves query performance for reports or dashboards that filter payments by ticket, payment method (e.g., M-Pesa, card), or payment status.
 
 
 
