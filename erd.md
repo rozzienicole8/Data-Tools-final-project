@@ -57,8 +57,6 @@ PAYMENTS:
 │ phone      │         │ location   │         │ price       │         │ status       │
 │ created_at │         │ event_date │         │ status      │         │ payment_date │
 └────────────┘         └────────────┘         └────────────┘         └──────────────┘
-
-
 ```
 
 ### Relationship Details
@@ -70,5 +68,21 @@ PAYMENTS:
 | **Events → Tickets**   | 1 → ∞ | One event can have multiple tickets.         |
 | **Tickets → Payments** | 1 → 1 | Each ticket corresponds to one payment.      |
 
+
+### Business Rules
+
+-**Each user must have a unique email.**
+
+-**An event must belong to a valid organizer (user).**
+
+-**A ticket must link to a valid event and buyer.**
+
+-**A payment must be tied to a valid ticket.**
+
+-Deleting a user or event cascades to related records.
+
+-Ticket price and payment amount must be positive.
+
+-Event dates cannot be in the past.
 
 
