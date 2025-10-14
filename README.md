@@ -265,8 +265,7 @@ If you like this project, please ⭐️ it on GitHub and share it with others!
 -**A2: Absolutely ,the schema is designed to be extensible using Supabase by adding or removing entities or editing the tables in schema.sql.**
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
---->
-```
+
 
 <!-- LICENSE -->
 
