@@ -255,16 +255,19 @@ If you like this project, please ⭐️ it on GitHub and share it with others!
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-```
-Q1: Does the database automatically update event statuses after the date passes?
-A1:  Not by default. You can create a SQL view or scheduled function to handle event status updates automatically.
 
-Q2: Can I add more entities like venues or sponsors?
-A2: Absolutely — the schema is designed to be extensible using Supabase by adding or removing entities.]**
+-**Q1: Does the database automatically update event statuses after the date passes?**
+
+-**A1: Not by default. You can create a SQL view or scheduled function to handle event status updates automatically.**
+
+-**Q2: Can I add more entities like venues or sponsors?**
+
+-**A2: Absolutely ,the schema is designed to be extensible using Supabase by adding or removing entities or editing the tables in schema.sql.**
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 --->
 ```
+
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
