@@ -103,6 +103,16 @@ JOIN events e ON t.event_id = e.event_id
 WHERE p.payment_method = 'M-Pesa';
 
 
+-- Create indexes for better performance
+CREATE INDEX idx_users_name_email ON users (name, email);
+-- EVENTS INDEXES
+CREATE INDEX idx_events_name_date ON events (event_name, event_date);
+CREATE INDEX idx_events_organizer_id ON events (organizer_id);
+-- TICKETS INDEXES
+CREATE INDEX idx_tickets_event_user ON tickets (event_id, user_id);
+CREATE INDEX idx_tickets_status ON tickets (status);
+-- PAYMENTS INDEXES
+CREATE INDEX idx_payments_ticket_method_status ON payments (ticket_id, payment_method, status);
 
 
 
