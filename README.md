@@ -115,15 +115,31 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-<!--
-Example command:
-
 ```sh
-  cd my-project
-  gem install
-```
---->
+1. **Open your Supabase project dashboard**  
+   - Go to [https://app.supabase.com](https://app.supabase.com) and log in to your account.  
+   - Select your project or create a new one if you haven’t already.  
 
+2. **Navigate to the SQL Editor**  
+   - In the left sidebar, click on **SQL Editor** to open the query editor window.  
+
+3. **Copy and paste the contents of `schema.sql`**  
+   - Open the `schema.sql` file from this repository.  
+   - Copy all the SQL code (it includes tables like `users`, `events`, `tickets`, and `payments`).  
+   - Paste it into the Supabase SQL Editor.  
+
+4. **Execute the SQL script**  
+   - Click the **Run** button to execute the script.  
+   - This will automatically create the database tables, relationships, and insert any sample data included.  
+
+5. **Verify the setup**  
+   - Go to **Table Editor** in Supabase to confirm that all tables (e.g., `users`, `events`, `tickets`, and `payments`) were created successfully.  
+   - Run a simple test query to confirm data exists:  
+     ```sql
+     SELECT * FROM events LIMIT 5;
+     ```  
+--->
+```
 ### Usage
 
 To run the project, execute the following command:
