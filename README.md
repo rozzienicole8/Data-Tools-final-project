@@ -120,7 +120,7 @@ Install this project with:
    - Go to [https://app.supabase.com](https://app.supabase.com) and log in to your account.  
    - Select your project or create a new one if you haven’t already.  
 
-2. **Navigate to the SQL Editor**  
+2. **Navigate to the SQL Editor** 
    - In the left sidebar, click on **SQL Editor** to open the query editor window.  
 
 3. **Copy and paste the contents of `schema.sql`**  
